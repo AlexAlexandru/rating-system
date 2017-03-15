@@ -721,7 +721,7 @@ $vortex_like_dislike = get_option("vortex_like_dislike");
 				$id = get_the_ID();
 			}
 
-			return	'<div class="vortex-container-dislike"><input type="hidden" value="'.$id.'" ></input><div class="vortex-p-dislike '.$id.' '. vortex_system_add_dislike_class() .' '.vortex_system_get_dislike_icon().'">'.$dislike_counter.'</div></div>';
+			return	'<div class="vortex-container-dislike"><input type="hidden" value="'.$id.'" /><div class="vortex-p-dislike '.$id.' '. vortex_system_add_dislike_class() .' '.vortex_system_get_dislike_icon().'">'.$dislike_counter.'</div></div>';
 			
 		}
 		
@@ -770,12 +770,12 @@ $vortex_like_dislike = get_option("vortex_like_dislike");
 			if(!$vortex_like_dislike['v-switch-dislike'] && $dislike){
 				
 
-			$buttons = '<div class="vortex-container-vote '.vortex_button_align().'"><div class="vortex-container-like"><input type="hidden" value="'.$id.'" ></input><div class="vortex-p-like '.$id.' '.vortex_system_add_like_class().' '.vortex_system_get_like_icon().'">'.$like_counter.'</div></div>'.vortex_system_render_dislike_button($counter).'</div>';
+			$buttons = '<div class="vortex-container-vote '.vortex_button_align().'"><div class="vortex-container-like"><input type="hidden" value="'.$id.'" /><div class="vortex-p-like '.$id.' '.vortex_system_add_like_class().' '.vortex_system_get_like_icon().'">'.$like_counter.'</div></div>'.vortex_system_render_dislike_button($counter).'</div>';
 				
 				return $buttons;
 			}else {
 
-				$buttons = '<div class="vortex-container-vote '.vortex_button_align().'"><div class="vortex-container-like"><input type="hidden" value="'.$id.'" ></input><div class="vortex-p-like '.$id.' '.vortex_system_add_like_class().' '.vortex_system_get_like_icon().'">'.$like_counter.'</div></div></div>';
+				$buttons = '<div class="vortex-container-vote '.vortex_button_align().'"><div class="vortex-container-like"><input type="hidden" value="'.$id.'" /><div class="vortex-p-like '.$id.' '.vortex_system_add_like_class().' '.vortex_system_get_like_icon().'">'.$like_counter.'</div></div></div>';
 				
 				return $buttons;
 			}
