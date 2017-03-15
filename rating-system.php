@@ -17,6 +17,8 @@ $sse = plugin_dir_path( __FILE__).'admin/framework/autoload.php';
 		include($sse);
 	};
 
+$vortex_like_dislike = null;
+
 function vortex_ra_read_cookie($name,$postid){
 	if(isset($_COOKIE[$name])){
 		$decode = json_decode($_COOKIE[$name]);
@@ -48,6 +50,7 @@ function vortex_ra_cookie($name,$postid,$name2){
 
 //require all usefull stuffs
 function vortex_systen_main_function(){
+	global $vortex_like_dislike;
 
 	if(class_exists('myCRED_Hook')){
 		include(plugin_dir_path( __FILE__ ).'mycredcomments.php');
@@ -82,8 +85,6 @@ function vortex_systen_main_function(){
 						';
 				}
 				add_action('sse_footer_vortex_like_dislike','vortex_system_donation_button');
-
-			$vortex_like_dislike = get_option("vortex_like_dislike");
 			
 				if($vortex_like_dislike['v-switch-posts'] && isset($vortex_like_dislike['v-switch-posts'])){
 					include(plugin_dir_path( __FILE__ ).'posts-pages.php');
